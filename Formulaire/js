@@ -1,0 +1,7 @@
+
+// On affiche le contenu de l'élément <option> ciblé par la propriété selectedIndex
+alert(list.options[list.selectedIndex].innerHTML); : list etant une variable evenementié
+
+select() // en plus de donner le focus à l'élément, sélectionne le texte de celui-ci si cela est possible :
+
+focus() et blur() // permettent respectivement de donner et retirer le focus à un élément.

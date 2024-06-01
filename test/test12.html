@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Le titre de la page</title>
+</head>
+<body>
+<div>
+<p id="myP">Un peu de texte, <a>un lien</a> et <strong>une portion en emphase</strong></p>
+</div>
+<script>
+var paragraph = document.getElementById('myP');
+var first = paragraph.firstChild;
+var last = paragraph.lastChild;
+var first2 = paragraph.firstElementChild;
+var last2 = paragraph.lastElementChild;
+alert(first.nodeName.toLowerCase()); // mettre en miniscule
+alert(last.nodeName.toLowerCase());
+alert(first.nodeName.toLowerCase());
+alert(last.nodeName.toUpperCase()); // mettre en majuscule
+// recuperer contenu de first2 et last2
+alert(first.data);
+alert(last.firstChild.data);
+
+
+
+</script>
+</body>
+</html>

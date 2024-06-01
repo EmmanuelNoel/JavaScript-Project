@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <title>
+
+  </title>
+  <!--utiliser set -->
+</head>
+
+<style>
+  .forme {
+    border: solid 1px black;
+    padding: 30px;
+    text-align: left;
+    width: 40%;
+    height: 300px;
+  }
+</style>
+
+
+<body id="body">
+
+  <div class="container mt-3 p-3">
+    <div class="row">
+      <div class="forme">
+        <img id="change" name="image" src="Photos/naruto117.jpg" alt="" width="100%">
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <br><br><br>
+  <hr>
+
+  <div class="container">
+    <div class="fw-bold fs-2 text-center">
+      Photos
+      <div class="row g-3 mt-3">
+        <div class="col-3">
+          <img name="img" id="images" src="Photos/img4.jpg" alt="" width="100%">
+        </div>
+        <div class="col-3">
+          <img id="image" src="Photos/naruto-uzumaki-18-nextsegment.com-.jpg" alt="" width="100%">
+        </div>
+        <div class="col-3">
+          <img id="image" src="Photos/naruto-uzumaki-21-nextsegment.com-.jpg" alt="" width="100%">
+        </div>
+        <div class="col-3">
+          <img id="image" src="Photos/naruto005.jpg" alt="" width="100%">
+        </div>
+        <div class="col-3">
+          <img id="image" src="Photos/naruto020.jpg" alt="" width="100%">
+        </div>
+        <div class="col-3">
+          <img id="image" src="Photos/naruto021.jpg" alt="" width="100%">
+        </div>
+        <div class="col-3">
+          <img id="image" src="Photos/naruto049.jpg" alt="" width="100%">
+        </div>
+        <div class="col-3">
+          <img id="image" src="naruto005.jpg" alt="" width="100%">
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <pre>
+
+
+
+</pre>
+
+
+  <script>
+    var element = document.getElementById('images');
+    var srcc = element.getAttribute('src');
+
+    var elements = document.getElementById('change');
+    var srcs = elements.setAttribute('srcs', srcc);
+
+   
+
+    element.addEventListener('click', function () {
+      document.image.src = document.img.src;
+      var changer = document.getElementById('body').innerHTML = ' <div class="container mt-3 p-3"><div class="forme"><img id="change" name="image" src="" alt="" width="100%"</div></div>';
+    }, false)
+
+
+   
+
+
+  </script>
+
+
+</body>
+
+</html>

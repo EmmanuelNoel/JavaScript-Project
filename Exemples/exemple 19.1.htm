@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>New Document</TITLE>
+<script language="Javascript">
+function GetTime () {
+	var time = new Date ();
+	var hours = time.getHours();
+	var min = time.getMinutes();
+	var sec = time.getSeconds();
+	if (hours < 10) hours = "0" + hours;
+	if (min < 10) min = "0" + min;
+	if (sec < 10) sec = "0" + sec;
+	document.time.heure.value = hours + ":" + min + ":" + sec;
+	window.setTimeout('GetTime()',1000);
+	}
+</script>
+</HEAD>
+<BODY onLoad="GetTime();">
+<form name="time">
+Voici l'heure :
+<center><input type="text" name="heure" value="" size=6></center>
+</form>
+</BODY>
+</HTML>

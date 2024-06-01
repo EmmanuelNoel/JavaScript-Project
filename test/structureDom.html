@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+       var newLink = document.createElement('a');
+var newLinkText = document.createTextNode("Le Site du Zéro");
+newLink.id = 'sdz_link';
+newLink.href = 'http://www.siteduzero.com';
+newLink.title = 'Découvrez le Site du Zéro !';
+newLink.setAttribute('tabindex', '10');
+newLink.appendChild(newLinkText);
+document.getElementById('myP').appendChild(newLink);
+   </script> 
+</body>
+</html>

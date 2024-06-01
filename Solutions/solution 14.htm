@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>New Document</TITLE>
+<script language="Javascript">
+var height = window.screen.availHeight;
+var width = window.screen.availWidth;
+function quit() {
+	alert("Vous fermez la fenêtre!");
+	}
+function ResizeDown() {
+	window.resizeTo(200,200);
+	}
+function ResizeUp() {
+	window.resizeTo(width,height);
+	}
+function Moveto() {
+	window.moveTo(210,345);
+	}
+function Moveback() {
+	window.moveTo(0,0);
+	}
+function Blur() {
+	window.blur();
+	}
+function Close() {
+	window.close();
+	}
+</script>
+</HEAD>
+<BODY onUnload="quit();">
+<form name="form1">
+	<input type="button" name="resize" value="Agrandir" onclick="ResizeUp();">
+	<input type="button" name="resize" value="Rétrécir" onclick="ResizeDown();">
+	<input type="button" name="move" value="Déplacer" onclick="Moveto();">
+	<input type="button" name="move" value="Revenir" onclick="Moveback();">
+	<input type="button" name="blur" value="Enlever le focus" onclick="Blur();">
+	<input type="button" name="close" value="Fermer" onclick="Close();">
+</form>
+</BODY>
+</HTML>

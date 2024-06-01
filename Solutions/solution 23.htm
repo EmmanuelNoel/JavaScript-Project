@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>New Document</TITLE>
+<script language="Javascript">
+function Afficher () {
+	document.write (this.nom + " a " + this.age + "ans et habite à " + this.ville + ".");
+	}
+function Utilisateur (Name,Age,Town) {
+	this.nom = Name;
+	this.age = Age;
+	this.ville = Town;
+	this.affich = Afficher;
+	}
+var nom = prompt("Votre nom :","");
+var age = prompt("Votre age :","");
+var ville = prompt("Votre ville :","");
+var internaute = new Utilisateur (nom,age,ville);
+internaute.affich();
+</script>
+</HEAD>
+<BODY>
+</BODY>
+</HTML>

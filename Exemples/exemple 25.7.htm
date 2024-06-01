@@ -1,0 +1,21 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>New Document</TITLE>
+<script language="Javascript">
+var tab = new Array(5);
+for (i = 0; i < 5; i++) tab[i] = i+1;
+
+Array.prototype.comment = null;
+tab.comment = "Tableau de 5 chiffres";
+
+function FirstElement () {
+	return this[0];
+	}
+Array.prototype.firstElement = FirstElement;
+document.write (tab.comment + " : premier élément : " + tab.firstElement());
+</script>
+</HEAD>
+<BODY>
+</BODY>
+</HTML>

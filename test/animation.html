@@ -1,0 +1,45 @@
+
+        <!doctype HTML>
+<html lang=” f r ”>
+ <head>
+ <meta charset=”UTF−8” />
+<title>Mon premier canvas HTML5 </title></head>
+<body> 
+    <canvas id="monCanvas" width="2000" height="1000" style="position :absolute ;"></canvas>
+ <script>
+ var timer = setInterval ( animate , 20) ;
+
+function animate ( ) {
+
+ // On récupère le canvas pour dessiner
+ var canvas = document . getElementById ( "monCanvas" ) ;
+ // On récupère un contexte du canvas pour utiliser les méthodes de dessin
+ var context = canvas . getContext ( "2d") ;
+ // couleur de remplissage rouge
+ context.fillStyle = "#FF0000" ;
+ context.beginPath ( ) ;
+ var d = new Date ( ) ;
+ var n = d.getTime ( ) ;
+ // nombre de millisecondes depuis le 01/01/1970
+
+ var sec = n / 1000.0 ;
+ context . clearRect ( 0 , 0 , canvas . width , canvas . height ) ;
+ context . save ( ) ;
+ context . translate (200+500 * (1+Math . cos ( 0.5 * sec ) ) , 100+100 *(1.0+ Math . sin ( sec ) ) ) ;
+ // l’angle de rotation doit être entre 0 et 2*Math.PI ’
+ context.rotate ( sec - 2*Math . PI*Math . round ( sec/ (2*Math . PI ) ) ) ;
+ context.moveTo(0 , 0) ;
+ context.lineTo (100 , 100) ;
+ context.lineTo (200 , 0) ;
+ context.lineTo (0 , 0) ;
+
+ context.fill ( ) ;
+
+ context.closePath ( ) ;context . restore ( ) ; }
+ </script>
+ <h1>Page HTML avec un canvas</h1>
+ <p>
+
+ </p>
+ </body>
+ </html>

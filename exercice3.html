@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Du html simple</title>
+</head>
+<body>
+<form name="form" >
+
+<label for="lastName">Nom :</label>
+<input name="lastName" id="lastName" type="text" />
+
+<br /><br />
+<label  for="firstName">Prénom :</label>
+<input name="firstName" id="firstName" type="text" />
+
+<br><br>
+
+<label  for="login">Login :</label>
+<input name="login" id="login" type="text" />
+
+<br><br>
+<div id="divcomp"></div>
+    <label class="text" for="pwd1">Password1:</label>
+<input name="pwd1" id="pwd1" type="password"  />
+
+<span class="tooltip">Le mot de passe ne doit pas faire moins
+de 6 caractères</span>
+<br /><br />
+
+    <label  for="pwd2">Passwor2:</label>
+<input name="pwd2" id="pwd2" type="password"  />
+<span class="tooltip" value="Le mot de passe de confirmation doit être identique à celui d'origine"></span>
+
+<br /><br />
+<span ></span>
+<button id="enregistrer" name="enregistrer" type="submit" >Se connecter</button>
+<button id="annuler" name="annuler" >Annuler</button>
+
+<input type="reset"
+value="Réinitialiser le formulaire" />
+</form>
+</body>
+
+
+<script>
+
+function verify()
+    {
+        if(document.form.pwd1.value != document.form.pwd2.value)
+        {
+            alert('mot de passe identique');
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+</script>
+
+
+</html>

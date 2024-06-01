@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>New Document</TITLE>
+<script language="Javascript">
+
+function TraitBySplit()  {
+	var chaine = document.form1.input.value;
+	var exp = new RegExp ('[.,;:/!? ]',"g");
+	tab = chaine.split(exp);
+	var result = "Voici les noms :";
+	for (i = 0 ; i < tab.length ; i++)  {
+		result = result + "\n" + tab[i] ;
+		}
+	document.form1.output.value = result;
+}
+
+function TraitByMatch()  {
+	var chaine = document.form1.input.value;
+	/*chaine = chaine.replace (/[éèêë]/g,"e") ;
+	chaine = chaine.replace (/[àäâ]/g,"a") ;
+	chaine = chaine.replace (/[üûù]/g,"u") ;
+	chaine = chaine.replace (/[òöô]/g,"o") ;
+	chaine = chaine.replace (/[ìïî]/g,"i") ;*/
+	var exp = new RegExp ('[A-Za-zìïîòöôüûùàäâéèêë]+',"g");
+	tab = chaine.match(exp);
+	var result = "Voici les noms :";
+	for (i = 0 ; i < tab.length ; i++)  {
+		result = result + "\n" + tab[i] ;
+		}
+	document.form1.output.value = result;
+}
+
+</script>
+</HEAD>
+<BODY>
+<center>
+<form name="form1">
+<textarea name="input" rows=5 cols=50>Entrez une suite de noms séparés indifféremment par les signes de ponctuation .,;:/!? et espace</textarea><br/>
+<input type="button" name="match" value="Avec match()" onClick="TraitByMatch();">&nbsp;
+<input type="button" name="split" value="Avec split()" onClick="TraitBySplit();"><br/>
+<textarea name="output" rows=5 cols=50>Résultat</textarea><br/>
+</form>
+</center>
+</BODY>
+</HTML>

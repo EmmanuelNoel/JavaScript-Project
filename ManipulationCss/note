@@ -1,0 +1,9 @@
+getComputedStyle // pour recuperer a valeur de n'importe quel style CSS
+offsetWidth// Contient la largeur complète (width + padding + border) de l'élément.
+offsetHeight// Contient la hauteur complète (height + padding + border) de l'élément.
+offsetLeft// Surtout utile pour les éléments en position absolue.Contient la position 
+de l'élément par rapport au bord gauche de son élément parent.
+offsetTop// Surtout utile pour les éléments en position absolue.Contient la position
+ de l'élément par rapport au bord supérieur de son élément parent.
+offsetParent// Utile que pour un élément en position absolue ou relative !Contient l'objet
+ de l'élément parent par rapport auquel est positionné l'élément actuel.

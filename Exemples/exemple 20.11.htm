@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>New Document</TITLE>
+<script language="Javascript">
+	var tab_images = new Array(4); //création d'un tableau de 4 éléments
+	for (i = 0; i < tab_images.length; i++)  { // pour chaque élément
+		tab_images[i] = new Image(); //on crée un objet Image
+		tab_images[i].src = i + ".gif"; //et on lui donne un fichier à charger
+		}
+	var nb = 0; //on initialise un compteur
+	function changer()  { // la fonction qui sera appelée.
+		nb++; //incrémenter le compteur
+		if (nb == tab_images.length)  { //si on est 4, on remet à 0 le compteur
+			nb = 0;
+			}
+		window.document.image.src = tab_images[nb].src; //affichage de l'image
+		}
+</script>
+</HEAD>
+<BODY onload="changer();"> <!-- la fonction est appelée aau chargement de la page -->
+<img src="" name="image"><br><!-- la balise <img> -->
+<input type="button" name="bouton" value="cliquez" onClick="changer();"> <!-- le bouton avec l'évènement -->
+</BODY>
+</HTML>

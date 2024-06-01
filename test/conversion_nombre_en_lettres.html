@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var nombre;
+        while (nombre = prompt('Entrez un nombre compris entre 0 et 999')) {
+            alert(conversion(parseInt(nombre, 10)));
+        }
+
+        function conversion(nombre) {
+            if (isNaN(nombre) || nombre < 0 || nombre > 999) {
+                return 'Veuillez entrez un nombre compris entre 0 et 999';
+            }
+
+            var tab1 = ['', 'un', 'deux', 'trois', 'quatre',
+                'cinq', 'six', 'sept', 'huit', 'neuf', 'dix', 'onze', 'douze',
+                'treize', 'quatorze', 'quinze', 'seize', 'dix-sept', 'dix-huit', 'dix-neuf'],
+                tab2 = ['', 'dix', 'vingt', 'trente', 'quarante',
+                    'cinquante', 'soixante', 'soixante', 'quatre-vingt', 'quatre-vingt'];
+            let unite = nombre % 10, dizaine = (nombre % 100 - unite) / 10, centaine = (nombre % 1000 - nombre % 100) / 100;
+            let unite_lettre, dizaine_lettre, centaine_lettre;
+            if (nombre === 0) {
+                return 'Zéro';
+            }
+            else {// traitement des unités 
+                unite_lettre = (unite === 1 && dizaine > 0 && dizaine !== 8 ? '-et-' : '') + tab1[unite];
+                //traitement des dizaines
+                if (dizaine === 1 && unite > 0) {
+                    dizaine_lettre = tab1[unite + 10];
+                    unite_lettre = '';
+                }
+                else if (dizaine === 7 || dizaine === 9) {
+                    dizaine_lettre = tab2[dizaine] + '-' + tab1[unite + 10];
+                    unite_lettre = '';
+                }
+                else {
+                    dizaine_lettre = (unite > 1 && dizaine > 0 || (unite === 1 && dizaine === 8) ? tab2[dizaine] + '-' : tab2[dizaine] + '');
+                }
+                dizaine_lettre += (unite === 0 && dizaine === 8 ? 's' : '');
+                // traitement des centaines 
+    centaine_lettre = (centaine > 1 ? tab1[centaine] + '-' : '') + (centaine > 0 ? 'cent' : '') + 
+    (centaine > 1 && unite == 0 && dizaine == 0 ? 's' : '-') ;
+
+                return centaine_lettre + dizaine_lettre + unite_lettre;
+            }
+
+
+
+
+
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

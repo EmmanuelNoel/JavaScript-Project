@@ -1,0 +1,20 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>New Document</TITLE>
+<script language="Javascript">
+function Eleve (Nom,Age) {
+	this.age = Age ;
+	this.nom = Nom ;
+	this.affich = affich_infos;
+	}
+function affich_infos () {
+	document.write (this.nom + " a " + this.age + " ans.");
+	}
+var Laurent = new Eleve(17, 'Laurent') ;
+Laurent.affich() ;
+</script>
+</HEAD>
+<BODY>
+</BODY>
+</HTML>

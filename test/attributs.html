@@ -1,0 +1,11 @@
+<body>
+    <a id="myLink">Un lien
+    modifié dynamiquement</a>
+    <script>
+    var link = document.getElementById('myLink');
+    var href = link.getAttribute('href'); // On récupère l'attribut « href »
+  
+    alert(link);
+    link.setAttribute('href', 'http://www.siteduzero.com'); // On édite l'attribut « href »
+    </script>
+    </body>

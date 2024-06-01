@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="menu">
+        <div class="plats">
+            <div id="riz">Riz</div>
+            <div id="macaroni">
+                Macaroni
+            </div>
+            <div id="haricot">Haricots</div>
+        </div>
+        <div class="fruits">
+            <div id="orange">
+                Orange
+            </div>
+            <div id="mangue">
+                Mangue
+            </div>
+            <div id="banane">
+                Banane
+            </div>
+        </div>
+    </div>
+
+    <div id="menu">
+        <div class="item">
+        <div id="divs">Élément 1</div>
+        <div id="divs">Élément 2</div>
+        </div>
+        <div class="publicite">
+        <div id="divs">Élément 3</div>
+        <div id="divs">Élément 4</div>
+        </div>
+        </div>
+       
+    <script>
+        let element = document.getElementById('riz');
+        alert(element);
+        alert(element.innerHTML); //        affiche riz
+        var divs = document.getElementsByTagName('div');
+        alert(divs[2].innerHTML); // affiche riz
+        let val = document.querySelector('#menu .fruits div');
+        alert(val.innerHTML);
+        let vals = document.querySelectorAll('#menu .item div');
+        for(i=0,c=vals.length;i<c;i++)
+        {
+            alert(vals[i].innerHTML);
+        }
+
+
+
+    </script>
+</body>
+</html>

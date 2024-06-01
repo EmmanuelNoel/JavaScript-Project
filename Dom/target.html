@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="result"></p>     
+<div id="parent1">
+Parent
+<div id="child1">Enfant N°1</div>
+<div id="child2">Enfant N°2</div>
+</div>
+<script>
+var parent1 = document.getElementById('parent1'),
+result = document.getElementById('result');
+parent1.addEventListener('mouseover', function(e) {
+result.innerHTML = "L'élément déclencheur de l'événement\"mouseover\" possède l'ID : " + e.target.id;
+}, false); // affiche child2 car l'évènement appliqué à l'élément parent s'est propagé à 
+
+</script>
+</body>
+</html>

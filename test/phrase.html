@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var nom,age,ville;
+nom = prompt('Quel est votre nom ???');
+age = prompt('Quel est votre age ???');
+ville = prompt('Quelle est la ville ???');
+var info = ' ' + nom + ' age de ' + age + ' habite ' + ville + ' ';
+
+    </script>
+
+    <input type="button" id="clique" value="Afficher">
+
+    <script>
+
+        var element = document.getElementById('clique');
+        element.onclick = function()
+        {
+            document.getElementById('clique').value =  info;
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,32 @@
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="button" id="clique" value="0">
+
+    
+
+<script>
+    var i = 0;
+    var element = document.getElementById('clique'); // On récupère tout d'abord l'élément HTML dont l'ID est clique ;
+    element.onclick = function() /* On accède ensuite à la propriété onclick à laquelle on assigne une fonction anonyme ; */ {
+        document.getElementById('clique').value = ++i;
+    };
+    </script>
+    
+    </button>
+</body>
+
+</html>

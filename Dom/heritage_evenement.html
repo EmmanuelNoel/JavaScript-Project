@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #myDiv, #results {
+margin: 50px;
+}
+#myDiv {
+padding: 10px;
+width: 200px;
+text-align: center;
+background-color: #000;
+}
+#myDiv div {
+margin: 10px;
+background-color: #555;
+}
+
+</style>
+<body>
+    <div id="myDiv">
+        <div>Texte 1</div>
+        <div>Texte 2</div>
+        <div>Texte 3</div>
+        <div>Texte 4</div>
+        </div>
+        <div id="results"></div>
+
+
+       <script>
+            var myDiv = document.getElementById('myDiv'),
+results = document.getElementById('results');
+myDiv.onmouseover = function() {
+results.innerHTML += "Le curseur vient d'entrer.";
+};
+myDiv.onmouseout = function() {
+results.innerHTML += "Le curseur vient de sortir.";
+};
+       </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>New Document</TITLE>
+<script language="Javascript">
+var exp_adresse = new RegExp ("^[0-9]{1,}[A-Za-z0-9 \-\.]+","g");
+var exp_code = new RegExp ("^[0-9]{5}$","g");
+var exp_ville = new RegExp ("^[A-Za-z]","g");
+function Test() {
+	var adresse = document.form1.adresse.value;
+	var code = document.form1.code.value;
+	var ville = document.form1.ville.value;
+	var test_adresse = exp_adresse.test(adresse);
+	var test_code = exp_code.test(code);
+	var test_ville = exp_ville.test(ville);
+	if (test_adresse == false) alert("Votre adresse n'est pas valide!");
+	if (test_code == false) alert("Votre code postal n'est pas valide!");
+	if (test_ville == false) alert("Votre ville n'est pas valide!");
+	if ( (test_ville == true)&&(test_code == true)&&(test_adresse == true) ) {
+		alert ('Coordonnées OK!');
+		}
+	}
+</script>
+</HEAD>
+<BODY>
+<form name="form1">
+Adresse : <input type="text" name="adresse" value="" size=50><br/>
+Code postal : <input type="text" name="code" value="" size=6> Ville : <input type="text" name="ville" value="" size=15><br/>
+<input type="button" name="test" value="Tester" onClick="Test();">
+</form>
+</BODY>
+</HTML>

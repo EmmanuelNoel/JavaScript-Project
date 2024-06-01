@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>New Document</TITLE>
+<script language="Javascript">
+var sec = 0;
+var min = 0;
+var hrs = 0;
+var test = 1;
+function f() {
+	sec++;
+	if (sec == 60) {
+		sec = 0;
+		min++;
+		}
+	if (min == 60) {
+		min = 0;
+		hrs++;
+		}
+	h = hrs;
+	m = min;
+	s = sec;
+	if (h < 10) h = "0" + h;
+	if (m < 10) m = "0" + m;
+	if (s < 10) s = "0" + s;
+	if (test == 1) {
+		parent.frame1.form1.out1.value = h + ":" + m + ":" + s;
+		test = 2;
+		}
+	else if (test == 2) {
+		parent.frame2.form2.out2.value = h + ":" + m + ":" + s;
+		test = 1;
+		}
+	window.setTimeout('f();',1000);
+	}
+</script>
+</HEAD>
+<frameset cols="50%,50%" onLoad="f();">
+	<frame src="exemple 21.7.1.htm" name="frame1">
+	<frame src="exemple 21.7.2.htm" name="frame2">
+</frameset>
+</HTML>

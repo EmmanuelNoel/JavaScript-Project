@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pendu.css">
+    <title>Pendu</title>
+    <script>
+
+
+    function regle()
+{
+alert("Bienvenu(e) dans le jeu du pendu réalisé par Emmanuel SOUWOUIN.\n Les règles sont très facile.\n Vous inscrivez des lettres dans le cadre 'lettres à tester' afin de deviner le mot caché. Si la lettre écrite est dans le mot, elle apparaîtra. Si celle-ci n'est pas dans le mot, une faute sera comptée. Au bout de dix erreurs vous serez pendu 'Haut et court'. Vous avez également la possibilité d'inscrire le mot complet (en cas d'erreur, il vous sera compté une faute). \n Si vous ne voulez pas utiliser votre clavier, utiliser le 'pavé', il suffit tout simplement de cliquer sur la lettre désirée avec votre souris.\n Bon jeu à tous!");
+
+}
+
+var mots = ["ANACONDA","EGYPTE","MARIAGE","COURIR","OBELISQUE","MARIAGE","AMIE","SAUTER"];
+var mots_restants = mots.slice(0);
+var mots_aleatoires ;
+
+
+</script>
+    
+</head>
+
+<body onload="regle();">
+
+    <center>
+        <div id="forme" class="mt-3">
+            <img name="pendu" class="pendu" src="pendu_0.jpg" alt="">
+            <h1 >
+                Jeu du pendu
+            </h1>
+            
+    <h2 >Entrez une lettre grâce au clavier ci-dessous ; 
+        si elle est dans le mot secret, elle sera affichée mais sinon... la sentence <br><br>
+
+        
+        <table id="clavier" >
+            <tr>
+             <td id="a" onclick="traitement(this);">A</td>
+             <td id="b" onclick="traitement(this);"  >B</td>
+             <td id="c" onclick="traitement(this);">C</td>
+             <td id="d" onclick="traitement(this);" >D</td>
+             <td id="e" onclick="traitement(this);">E</td>
+             <td id="f" onclick="traitement(this);" >F</td>
+             <td id="g" onclick="traitement(this);">G</td>
+             <td id="h" onclick="traitement(this);">H</td>
+             <td id="i" onclick="traitement(this);">I</td>
+             <td id="j" onclick="traitement(this);">J</td>
+            </tr>
+
+            <tr>
+                <td id="k" onclick="traitement(this);" >K</td>
+                <td id="l" onclick="traitement(this);">L</td>
+                <td id="m" onclick="traitement(this);">M</td>
+                <td id="n" onclick="traitement(this);">N</td>
+                <td id="o" onclick="traitement(this);">O</td>
+                <td id="p" onclick="traitement(this);">P</td>
+                <td id="q" onclick="traitement(this);">Q</td>
+                <td id="r" onclick="traitement(this);">R</td>
+                <td id="s" onclick="traitement(this);">S</td>
+                <td id="t" onclick="traitement(this);">T</td>
+               </tr>
+               <tr>
+                <td id="u" onclick="traitement(this);">U</td>
+                <td id="v" onclick="traitement(this);">V</td>
+                <td id="w" onclick="traitement(this);">W</td>
+                <td id="x" onclick="traitement(this);">X</td>
+                <td id="y" onclick="traitement(this);">Y</td>
+                <td id="z" onclick="traitement(this);">Z</td>
+               </tr>
+        </table>
+
+
+        <br><br>
+        <a class="pendu" href="javascript:location.reload();">Nouvelle partie</a> <br><br>
+
+        <script src="">
+           
+        alert('mots_restants');
+             
+        </script>
+    
+       
+         </div>
+    </center>
+    
+</body>
+</html>

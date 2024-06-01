@@ -1,0 +1,23 @@
+<html>
+<head>
+<script language="Javascript">
+var tab = new Array (4) ;
+for (i = 0; i < 4; i++) {
+	tab[i] = new Image();
+	tab[i].src = i + ".gif";
+	}
+function f() {
+	for (i = 0; i < 4; i++) {
+		document.images[i].src = tab[i].src ;
+		}
+	}
+</script>
+</head>
+<body>
+<img  name="img0"><br/>
+<img  name="img1"><br/>
+<img  name="img2"><br/>
+<img  name="img3"><br/>
+<input type="button" name="click" value="Afficher les images" onClick="f();">
+</body>
+</html>

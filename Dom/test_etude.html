@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function afficher(tab)
+        {
+            
+            for(var i = 0;i< tab.length;i++)
+            {
+                document.write(tab[i]+' ');
+            }
+            document.write('<br>')
+        }
+
+        var tab = ['Aime','Emmanuel','Parfait','Eugenio','Pamelo'];
+        afficher(tab);
+        tab.unshift('Honore');
+      afficher(tab);
+      tab.push('Yaourt','Clémence');
+        afficher(tab);
+        var taille = tab.length/2;
+        tab[taille] = 'Arcaduis';
+        afficher(tab);
+       tab.pop();
+       afficher(tab);
+        </script>
+      
+</head>
+<body>
+    
+</body>
+</html>

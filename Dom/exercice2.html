@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // création de l'élement div et ses propriétés
+        var mainDiv = document.createElement('div');
+        mainDiv.id = 'divTP1';
+
+        // création d'un tableau contanant tous les noeuds textuels 
+        var noeudsTexteuels = [
+            document.createTextNode('Le '),
+            document.createTextNode('World Wide Web Consortium'),
+            document.createTextNode(' abrégé par le sigle'),
+            document.createTextNode('W3C'),
+            document.createTextNode(', est un '),
+            document.createTextNode(' organisme de standardisation'),
+            document.createTextNode(' à but non-lucratif chargé de promouvoir la compatibilité des technologies du '),
+            document.createTextNode('World Wide Web'),
+            document.createTextNode('.'),
+         ]
+
+         // création des deux strongs, deux a et leurs propriétés
+         var w3cStrong1 = document.createElement('strong');
+         var w3cStrong2 = document.createElement('strong');
+
+         w3cStrong1.appendChild(noeudsTexteuels[1]);
+         w3cStrong2.appendChild(noeudsTexteuels[3]);
+
+         var orgLink = document.createElement('a');
+         orgLink.href = 'http://fr.wikipedia.org/wiki/Organisme_de_normalisation';
+         orgLink.title = 'Organisme de normalisation';
+         orgLink.appendChild(noeudsTexteuels[5]);
+
+         var wwwLink = document.createElement('a');
+         wwwLink.href = 'http://fr.wikipedia.org/wiki/World_Wide_Web';
+         wwwLink.title = 'World Wide Web';
+         wwwLink.appendChild(noeudsTexteuels[7]);
+
+         //Insertion dans le div 
+
+
+         mainDiv.appendChild(noeudsTexteuels[0]);
+mainDiv.appendChild(w3cStrong1);
+mainDiv.appendChild(noeudsTexteuels[2]);
+mainDiv.appendChild(w3cStrong2);
+mainDiv.appendChild(noeudsTexteuels[4]);
+mainDiv.appendChild(orgLink);
+mainDiv.appendChild(noeudsTexteuels[6]);
+mainDiv.appendChild(wwwLink);
+mainDiv.appendChild(noeudsTexteuels[8]);
+
+
+//Insertion dans le body
+
+document.body.appendChild(mainDiv);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>New Document</TITLE>
+<script language="Javascript">
+
+var log = "prof";
+var pass = "abcd";
+var login;
+var password;
+var prenom;
+var test = 1; // variable qui servira à stopper le traitement lorsqu'elle sera à 0.
+
+login = prompt ("Login?","login"); //on demande le login
+if (login != null)  { // si l'utilisateur n'a pas chois "Annuler"
+	while (login != log)  { //tant que le login n'est pas correct...
+		login = prompt ("Login?","login"); // ...on redemande le login
+		}
+
+	for (i = 1; i < 4; i++)  { // on configure les 3 essais
+		password = prompt ("Password?\nEssai " + i,"password"); //on demande le password
+		if (password == pass)  { //si le password est correct, on interrompt la boucle
+			break;
+			}
+		if ( (password != pass) && (i == 3) )  { // si c'est le 3ème essai, et que le password est incorrect
+			test = 0; // on mais le test false
+			document.write ('3 essais erronés. Accès refusé.'); // on écrit le refus d'accès
+			}
+		}
+
+	if (test ==1)  { // si le test est réussi
+		prenom = prompt("Votre prénom?","prénom"); // on demande le prénom
+		var confirmation = confirm("Votre prénom est bien " + prenom +"?"); // on demande confirmation
+		while ( confirmation == false)  { // si l'internaute n'a pas confirmé, et tant qu'il ne confirme pas...
+			prenom = prompt("Votre prénom?","prénom"); // ...on redemande le prénom...
+			confirmation = confirm("Votre prénom est bien" + prenom); // ...et on redemande conifrmation
+			}
+		document.write ('Merci de votre visite, ' + prenom); // enfin, on affiche le prénom dans la page
+		}
+	}	
+</script>
+</HEAD>
+<BODY>
+</BODY>
+</HTML>

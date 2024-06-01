@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>New Document</TITLE>
+<script language="Javascript">
+var chaine = 'C\'est une Chaine avec des caractères spéciaux, hé oui !!!';
+function LastChar () { 
+	return "Dernier caractère : " + this.charAt(this.length-1); 
+	}
+function Esc() {
+	return escape(this);
+	}
+function Value() {
+	var val;
+	val = "Constructeur : " + this.constructor + " ; Valeur : " + this.valueOf();
+	return val;
+	}
+String.prototype.lastChar = LastChar;
+String.prototype.esc = Esc;
+String.prototype.value = Value;
+
+valeur = chaine.value();
+code = chaine.esc();
+last_char = chaine.lastChar();
+document.write (chaine + "<br/>");
+document.write (code + "<br/>");
+document.write (valeur + "<br/>");
+document.write (last_char + "<br/>");
+</script>
+</HEAD>
+<BODY>
+</BODY>
+</HTML>

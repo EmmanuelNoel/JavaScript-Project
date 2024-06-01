@@ -1,0 +1,22 @@
+#form
+{
+    
+    border: 1px solid black ;
+    width: 70%;
+    margin: auto;
+    box-shadow: 6px 6px 0px black ;
+  
+}
+
+.ligne
+{
+    margin: auto;
+    min-width: 70%;
+    
+}
+
+#lign
+{
+    margin: auto;
+    
+}

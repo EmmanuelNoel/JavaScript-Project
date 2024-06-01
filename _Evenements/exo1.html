@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="exo1.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <title>Document</title>
+</head>
+<body>
+    <section class="container mt-2 " id="form">
+        <form class="g-3 " id="forme">
+            <div class="row ">
+             <div class="col-lg-4 col-6 ligne">
+                <label for="inputEmail4" class="form-label">Nom</label>
+                <input type="email"name="nom"  class="form-control" id="inputEmail4">
+             </div>
+            </div>
+            <div class="row ">
+              <div class="col-lg-4 col-6 ligne">
+                <label for="inputPassword4" class="form-label">Age</label>
+                <input type="number" name="age" class="form-control" id="inputPassword4">
+              </div>
+            </div>
+            <div class="row ">
+             <div class="col-lg-4 col-6 ligne">
+                <label for="inputAddress" class="form-label">Mot de passe</label>
+                <input type="password" name="pass" class="form-control" id="inputAddress" placeholder="1234 Main St">
+             </div>
+            </div>
+            
+
+          
+          </form>
+         <div class="row mb-3 mt-3">
+             <div class="col-lg-4 col-6" id="lign" >
+                <button class="btn btn-info " onclick="recuperation()">Récupérer</button>
+             </div>
+         </div>
+    </section>
+
+    <script>
+        function recuperation()
+        {
+            var form = document.getElementById('forme');
+            var nom = form.nom.value;
+            var age = form.age.value;
+            var pass = form.pass.value;
+
+            alert(' Votre nom est '+nom+' \n Votre age est '+age+'ans \n Votre mot de passe est '+pass);
+        }
+    </script>
+</body>
+<script src="js/bootstrap.bundle.min.js"></script>
+</html>

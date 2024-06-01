@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="clique" type="button">Cliquez moi</button>
+    <script>
+      
+      var element = document.getElementById('clique');
+      element.addEventListener('click',function(){
+          alert("Yo le petit poisson1");
+      },false);
+      
+      var element = document.getElementById('clique');
+      var message = function()
+      {
+          alert("Yo le petit poisson2");
+      };
+      element.addEventListener('click',message,false);
+    //  element.removeEventListener('click', message, false); : suppression de l'evenement
+
+
+
+
+    </script>
+</body>
+</html>

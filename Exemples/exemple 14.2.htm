@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>New Document</TITLE>
+<script language="Javascript">
+var seconds = 0;
+var minutes = 0;
+var hours = 0;
+function chrono () {
+	if (seconds == 60) {
+		seconds = 0;
+		minutes++;
+		}
+	if (minutes == 60) {
+		minutes = 0;
+		hours++;
+		}
+	h = hours;
+	m = minutes;
+	s = seconds;
+	if (s < 10) s = "0" + s;
+	if (m < 10) m = "0" + m;
+	if (h < 10) h = "0" + h;
+	document.form1.chrono.value = h + ":" + m + ":" + s;
+	seconds++;
+	window.setTimeout('chrono()',1000);
+	}
+</script>
+</HEAD>
+<BODY onLoad="chrono();">
+<form name="form1">
+<center><input type="text" value="" name="chrono" size=6></center>
+</form>
+</BODY>
+</HTML>

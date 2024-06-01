@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a id="lien" href="animation.html">Un lien modifié dynamiquement </a>
+    <script>
+        let val = document.getElementById('lien');
+        alert(val);
+        alert(val.innerHTML);
+        let href = val.getAttribute('href');
+        alert(href);
+        val.setAttribute('href','conversion_nombre_en_lettres.html');
+    </script>
+</body>
+</html>

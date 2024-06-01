@@ -1,0 +1,108 @@
+Les codes Javascript sont insérés au moyen de l'élément <script>. Cet élément possède un attribut type quisert à indiquer
+le type de langage que l'on va utiliser. Dans notre cas, ils'agit de Javascript, mais ça pourrait être autre chose, 
+comme du VBScript, bien que ce soit extrêmement rare
+
+En HTML 4 et XHTML 1.x, l'attribut type est obligatoire. En revanche, en HTML5, il ne l'est pas. C'est pourquoi les
+exemples de ce cours, en HTML5, ne comporteront pas cet attribut.
+
+Si vous n'utilisez pas le HTML5, sachez que l'attribut type prend comme valeur text/javascript, qui est en fait le type
+MIME d'un code Javascript.
+
+Le type MIME est un identifiant qui décrit un format de données. Ici, avec text/javascript, ils'agit de données
+textuelles et c'est du Javascript.
+
+//Documentation:Mozilla Developer Network
+
+----------------------------------------------------
+typeof // pour vérifier le type de la variable.
+
+parseINT // convertir une chaine de caractères en nombre
+
+result = number1 == number3;
+alert(result); // Affiche true ou false en fonction de la valeur de nombre1 et nombre3
+
+
+n === m ou n !== m // compare les types et les valeurs des variables n et m
+
+L'opérateur ET
+Cet opérateur vérifie la condition lorsque toutes les valeurs qui lui sont passées valent true. Si une seule d'entre
+elles vaut false alors la condition ne sera pas vérifiée
+
+L'opérateur OU
+//Cet opérateur est plus « souple » car il renvoie true si une des valeurs qui lui est soumise contient true, 
+qu'importent les autres valeurs
+//Encore un cas à part : l'opérateur OU ! Celui-ci, en plus de sa fonction principale, permet de renvoyer la 
+première variable possédant une valeur évaluée à true
+
+getElementsByTagName // recuperer un tableau contenant la valeur de tous les champ d'une  balise 
+
+getElementsByTagName('div') // recuperer un tableau contenant la valeur de tous les champ de la balise div
+
+getElementById // recuperer la valeur du champ
+
+querySelector // recuperer la valeur du champ
+
+querySelectorAll //recuperer un tableau contenant la valeur de tous les champ de la balise div
+
+shift(); //  Le retrait se fait au début .
+
+pop(); //   Le retrait se fait à la fin .
+
+push () ; // ajouter à la fin
+
+ unshift(); // ajouter au début
+
+getAttribute // prendre la valeur d'un attribut
+
+setAttribute // remplacer un element par un autre 
+
+parentNode // recuperer la valeur d'un parent
+
+nodeName // recuperer le nom du premier element : <p id="div" > </p> , recupere p
+
+nodeType // recupere le type
+
+firstElement , lastElement  // recupere le nom du premier constituant : Exemple  (<p id="div" > Un peu de texte,
+ <a>un lien</a> et <strong> une portion en emphase</strong> </p> ), recupere #text pour le premier element et
+  strong pour le dernier element 
+
+ firstElementChild et lastElementChild // recupereront pour la meme phrase l'element "a" et "strong"
+
+ nodeValue et data // pour recuperer le contenu de chaque element (balise) . Aussi ils s'appliquent sur les noeuds 
+textuels et pas sur les balises .
+
+childNodes // retourne un tableau comportant la liste des enfants d'un élement
+
+nextSibling // accéder au noeud suivant
+
+previousSibling // accéder au noeud précédent
+
+nextElementSibling et previousElementSibling // permettent, elles aussi, de ne récupérer que les éléments HTML.
+
+createElement('') // pour créer un element 
+
+appendChild // insérer un élément (enfant) dans un autre 
+
+createTextNode // créer un noeud textuel 
+
+// On va cloner un élément créé :
+var hr1 = document.createElement('hr');
+var hr2 = hr1.cloneNode(false); // Il n'a pas d'enfants…
+
+// Ici, on clone un élément existant :
+var paragraph1 = document.getElementById('myP');
+var paragraph2 = paragraph1.cloneNode(true);
+
+replaceChild (new element , ancien element) // remplacer
+
+removeChild // supprimer un element
+
+ hasChildNodes() //  vérifier la présence d'éléments enfants 
+
+ insertBefore() // permet d'insérer un élément avant un autre. Elle reçoit deuxparamètres : le premier est l'élément
+à insérer, tandis que le deuxième est l'élément avant lequel l'élément va être inséré
+
+
+this // Il s'agit d'une propriété pointant sur l'objet actuellement en cours d'utilisation. Donc, si vous faites appel 
+à ce mot clé lorsqu'un événement est déclenché, l'objet pointé sera l'élément qui a déclenché l'événement
+

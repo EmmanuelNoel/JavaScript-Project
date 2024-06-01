@@ -1,0 +1,44 @@
+<div>
+<span>Du texte !</span>
+</div>
+
+Concernant le troisième paramètre  "False" ou "True" lorsqu'on veut déclencher un evenement ,  Si vous décidez
+ d'utiliser la capture(True), alors l'événement
+du <div> se déclenchera en premier puis viendra ensuite l'événement du <span>.
+En revanche, si vous utilisez le
+bouillonnement(False), ce sera d'abord l'événement du <span> qui se déclenchera, puis viendra par la suite celui du <div>
+
+
+e.target.id // Récupérer l'élément à l'origine du déclenchement de l'événement
+
+e.target // Récupérer l'élément de l'événement actuellement déclenché , l'élément déclencheur de
+l'événement , affiche le contenu de l'element evenementié
+
+e.type // type de l'évènement 
+
+Pour récupérer la position de notre curseur, il existe deux propriétés : clientX // pour la position horizontale et
+clientY // pour la position verticale.
+
+e.relatedTarget.id // Récupérer l'élément en relation avec un événement de souris.
+Avec l'événement mouseout, elle vous fournira l'objet de l'élément sur lequel le curseur vient d'entrer ;
+ avec l'événement mouseover, elle vous fournira l'objet de l'élément dont le curseur vient de sortir.
+L'évènement est appliqué à un element, on récuperera ainsi l'id de l'element associé(l'element sur lequel on a cliqué) 
+au premier élement 
+
+keyup // se déclenche lorsque vous relâchez une touche
+
+keydown// se déclenche au moment de l'appui sur la touche (comme mousedown)
+
+Ces deux evenements retournent des lettres majuscules 
+
+ keypress // il sert uniquement à capter les touches qui écrivent un caractère , il s'utilise aussi pour les combinaisons
+ de touche
+
+ keyCode, charCode , which// Ces propriétés renvoient chacune un code ASCII correspondant à la touche pressée
+
+ e.preventDefault(); //  bloquer l'action par défaut d'un événement
+
+ 
+
+
+

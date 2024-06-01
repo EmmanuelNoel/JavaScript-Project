@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>New Document</TITLE>
+<script language="Javascript">
+// objets date
+var an2000 = new Date();
+var today = new Date();
+//ont crée la date de l'an 2000
+an2000.setHours(0);
+an2000.setMinutes(0);
+an2000.setSeconds(0);
+an2000.setYear(2001);
+an2000.setMonth(0);
+an2000.setDate(0);
+// on récupère le nombre de millisecondes depuis 1970 pour les deux dates.
+var msec2000 = an2000.getTime();
+var msectoday = today.getTime();
+// on fait la différence
+var result = msectoday - msec2000;
+// on convertit en jours
+result = result / (24*60*60*1000);
+//on affiche l'arrondi
+document.write (Math.floor(result) + ' jours se sont écoulés depuis l\'an ' + an2000.getYear() );
+</script>
+</HEAD>
+<BODY>
+</BODY>
+</HTML>

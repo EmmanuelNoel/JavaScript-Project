@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>New Document</TITLE>
+<script language="Javascript">
+var today = new Date();
+diff = today.getTimezoneOffset();
+heures = today.getHours();
+heures = heures + (diff/60);
+today.setHours(heures);
+hours = today.getHours();
+minutes = today.getMinutes();
+seconds = today.getSeconds();
+if (seconds < 10) seconds = "0" + seconds;
+if (minutes < 10) minutes = "0" + minutes;
+if (hours < 10) hours = "0" + hours;
+jours = today.getDay();
+if (jours == 0) jour = "Sun";
+if (jours == 1) jour = "Mon";
+if (jours == 2) jour = "Tue";
+if (jours == 3) jour = "Wen";
+if (jours == 4) jour = "Thu";
+if (jours == 5) jour = "Fri";
+if (jours == 6) jour = "Sat";
+mois = today.getMonth();
+if (jours == 0) mois = "Jan";
+if (jours == 1) mois = "Feb";
+if (jours == 2) mois = "Mar";
+if (jours == 3) mois = "Apr";
+if (jours == 4) mois = "May";
+if (jours == 5) mois = "Jun";
+if (jours == 6) mois = "Jul";
+if (jours == 7) mois = "Aug";
+if (jours == 8) mois = "Sep";
+if (jours == 9) mois = "Oct";
+if (jours == 10) mois = "Nov";
+if (jours == 11) mois = "Dec";
+document.write ('Heure GMT : ' + jour + ", " + today.getDate() + " " + mois + " " + today.getYear() + " " + hours + ':' + minutes + ':' + seconds + " UTC" +'<br>' );
+var time = new Date ();
+document.write ('Heure GMT : ' + time.toGMTString());
+
+</script>
+</HEAD>
+<BODY>
+</BODY>
+</HTML>

@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>New Document</TITLE>
+<script language="Javascript">
+function SetCookie() {
+	document.cookie = "Visite=1; expires=500000";
+	}
+
+function GetCookie() {
+	var variable_a_trouver = "Visite" ;
+	variable_a_trouver = variable_a_trouver + "=" ; 
+	var chaine = document.cookie ;
+	document.form1.result.value = document.cookie;
+	var longueur = variable_a_trouver.length ; 
+	var resultat ;
+	if (chaine.length > 0)  {
+		var debut = chaine.indexOf(chaine_a_trouver,0);
+		if (debut >=0)  {
+			var fin ;
+			debut = debut + longueur ;
+			fin = chaine.indexOf(";", debut) ;
+			if (fin>=0)  {
+				resultat = unescape(chaine.substring(debut,fin)) ;
+				document.form1.result.value = result;
+				}
+			else  {
+				resultat = unescape(chaine.substring(debut,chaine.length)) ;
+				document.form1.result.value = result;
+				}
+			}
+		}
+	}
+</script>
+</HEAD>
+<BODY>
+<form name="form1">
+<input type="button" name="set" value="Set cookie" onClick="SetCookie();">
+<input type="button" name="Get" value="Get cookie" onClick="GetCookie();">
+<input type="text" name="result">
+</form>
+</BODY>
+</HTML>

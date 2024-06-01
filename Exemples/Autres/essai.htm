@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE>New Document</TITLE>
+<script language="Javascript">
+
+var Tableau = new Array (10) ; // objet tableau
+for (i = 0; i < 10; i++) { // pour chaque élément...
+	Tableau[i] = new Array(10); // on redéfinit un tableau
+	}
+// remplissage du tableau
+for (i = 0; i < 10; i++) { // pour chaque élément de la première dimension
+	for (j = 0; j < 10; j++) { // pour chaque élément de la seconde dimension
+		Tableau[i][j] = i + "." + j; //on remplit l'élément
+		}
+	}
+// affichage du tableau
+for (i = 0; i < 10; i++) { // pour chaque élément de la première dimension
+	for (j = 0; j < 10; j++) { // pour chaque élément de la seconde dimension
+		document.write( Tableau[i][j] + " ; " ); //on affiche l'élément, avec un point virgule
+		}
+	document.write ("<br>"); // a chaque unité, on revient à la ligne.
+	}
+
+</script>
+</HEAD>
+<BODY>
+</BODY>
+</HTML>
